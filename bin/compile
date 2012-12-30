@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+set -e
+
 BUILD_DIR=$1
 CACHE_DIR=$2
 
@@ -27,7 +29,7 @@ function indent() {
 # Download and compile Nginx
 cd $CACHE_DIR
 progress "Downloading Nginx Sources"
-wget -q $NGINX_URL
+curl $NGINX_URL -o $NGINX_FILENAME
 
 progress "Extracting Nginx Sources"
 tar -xzf $NGINX_FILENAME
