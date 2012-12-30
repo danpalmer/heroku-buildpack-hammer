@@ -1,0 +1,8 @@
+server {
+    listen <%= ERB['PORT'] %>;
+    server_name HerokuHammerServer;
+
+    location / {
+        root /app/Build;
+    }
+}
