@@ -16,7 +16,8 @@ http {
     gzip_types text/plain application/xhtml+xml text/xml application/xml application/xml+rss;
 
     server {
-        listen <%= ENV['PORT'] %> default_server;
+        listen      <%= ENV['PORT'] %>;
+        server_name 127.0.0.1;
 
         location / {
             root    /app/Build;

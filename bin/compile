@@ -50,6 +50,7 @@ progress "Creating Boot Script"
 cp "$SUPPORT_DIR/nginx.conf.erb" "$BUILD_DIR/nginx/conf/nginx.conf.erb"
 cd $BUILD_DIR
 cat >>boot.sh <<EOF
+#!/usr/bin/env bash
 set -e
 set -x
 erb ~/nginx/conf/nginx.conf.erb > ~/nginx/conf/nginx.conf
