@@ -1,0 +1,10 @@
+#!/bin/sh
+# bin/release <build-dir>
+
+cat <<EOF
+---
+config_vars:
+  PATH: ${HOME}nginx/sbin:/usr/local/bin:/usr/bin:/bin
+default_process_types:
+  web: sh boot.sh
+EOF
