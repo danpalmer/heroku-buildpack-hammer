@@ -10,4 +10,15 @@ Repositories are considered a valid Hammer project if they contain a `Build` dir
 
     $ git push heroku master
     ...
-    
+    -----> Downloading Nginx Sources
+    -----> Extracting Nginx Sources
+    -----> Configuring
+    -----> Compiling
+    -----> Installing
+    -----> Creating Boot Script
+
+
+#### Credits
+
+Tips on the general process of using Nginx on Heroku taken from mchung/heroku-buildpack-nginx by @mchung.
+

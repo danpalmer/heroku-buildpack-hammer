@@ -43,7 +43,7 @@ make 2>&1 | indent
 progress "Installing"
 make install 2>&1 | indent
 
-progress "Creating boot script"
+progress "Creating Boot Script"
 cp "$SUPPORT_DIR/nginx.conf.erb" "$BUILD_DIR/nginx/conf/nginx.conf.erb"
 cd $BUILD_DIR
 cat >>boot.sh <<EOF
