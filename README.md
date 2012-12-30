@@ -20,5 +20,6 @@ Repositories are considered a valid Hammer project if they contain a `Build` dir
 
 #### Credits
 
-Tips on the general process of using Nginx on Heroku taken from mchung/heroku-buildpack-nginx by @mchung.
+Tips on the general process of using Nginx on Heroku taken from [heroku-buildpack-nginx](http://github.com/mchung/heroku-buildpack-nginx/) by [@mchung](http://github.com/mchung/).
 
+Nginx configuration taken from http://library.linode.com/web-servers/nginx/configuration/basic.
