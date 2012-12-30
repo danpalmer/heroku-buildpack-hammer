@@ -6,7 +6,8 @@ set -e
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-SUPPORT_DIR="$PWD/support"
+BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
+SUPPORT_DIR="$BUILDPACK_DIR/support"
 
 NGINX_DIR="nginx-1.2.6"
 NGINX_FILENAME="$NGINX_DIR.tar.gz"
