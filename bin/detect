@@ -1,0 +1,10 @@
+#!/bin/sh
+# bin/detect <build-dir>
+
+# This buildpack is valid for use in project with a Build directory
+if [ -d $1/Build ]; then
+  echo "Hammer Buildpack"
+  exit 0
+else
+  exit 1
+fi
