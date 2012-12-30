@@ -1,5 +1,5 @@
 server {
-    listen <%= ERB['PORT'] %>;
+    listen <%= ENV['PORT'] %>;
     server_name HerokuHammerServer;
 
     location / {

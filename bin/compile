@@ -50,9 +50,11 @@ progress "Creating Boot Script"
 cp "$SUPPORT_DIR/nginx.conf.erb" "$BUILD_DIR/nginx/conf/nginx.conf.erb"
 cd $BUILD_DIR
 cat >>boot.sh <<EOF
-erb ./nginx/conf/nginx.conf.erb > ./nginx/conf/nginx.conf
-touch ./nginx/logs/access.log ./nginx/logs/error.log
+set -e
+set -x
+erb ~/nginx/conf/nginx.conf.erb > ~/nginx/conf/nginx.conf
+touch ~/nginx/logs/access.log ~/nginx/logs/error.log
 echo "Launching Nginx"
-nginx -p ./nginx
+nginx -p ~/nginx
 EOF
 chmod +x boot.sh
