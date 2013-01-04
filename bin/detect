@@ -2,7 +2,14 @@
 # bin/detect <build-dir>
 
 # This buildpack is valid for use in project with a Build directory
-if [ -d $1/Build ]; then
+
+WEB_DIR=Build
+
+if [[ -a ".buildrc" ]]; then
+    source .buildrc
+fi
+
+if [ -d $1/$WEB_DIR ]; then
   echo "Hammer Buildpack"
   exit 0
 else
