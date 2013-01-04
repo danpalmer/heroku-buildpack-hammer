@@ -53,6 +53,9 @@ cat >>boot.sh <<EOF
 #!/usr/bin/env bash
 set -e
 set -x
+if [[ -a .buildrc ]]; then
+    source .buildrc
+fi
 erb ~/nginx/conf/nginx.conf.erb > ~/nginx/conf/nginx.conf
 touch ~/nginx/logs/access.log ~/nginx/logs/error.log
 echo "Launching Nginx"
