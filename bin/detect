@@ -4,10 +4,7 @@
 # This buildpack is valid for use in project with a Build directory
 
 WEB_DIR=Build
-
-if [[ -a ".buildrc" ]]; then
-    source .buildrc
-fi
+source .buildrc
 
 if [ -d $1/$WEB_DIR ]; then
   echo "Hammer Buildpack"
