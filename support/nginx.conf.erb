@@ -21,7 +21,7 @@ http {
         server_name 127.0.0.1;
 
         location / {
-            root    /app/<%= if ENV['WEB_DIR'] then ENV['WEB_DIR'] else 'Build' %>;
+            root    /app/Build;
             index   index.html index.htm;
             port_in_redirect off;
         }
